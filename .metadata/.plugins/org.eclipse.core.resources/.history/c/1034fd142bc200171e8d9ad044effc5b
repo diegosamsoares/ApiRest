@@ -1,0 +1,21 @@
+package controllers;
+
+import java.util.List;
+
+import javax.ws.rs.Path;
+
+import model.Chamado;
+
+@Path("chamados")
+public class ChamadoController {
+	
+	
+	private List<Chamado> lista(){
+		Chamado ch1 = new Chamado(new Long(1) , "");
+		
+		return null;
+		
+	}
+	
+
+}

@@ -1,0 +1,27 @@
+package controllers;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import model.Chamado;
+
+@Path("chamados")
+public class ChamadoController {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/")
+	private List<Chamado> lista(){
+		
+		Chamado ch1 = new Chamado(new Long(1) , "");
+		
+		return null;
+		
+	}
+	
+
+}

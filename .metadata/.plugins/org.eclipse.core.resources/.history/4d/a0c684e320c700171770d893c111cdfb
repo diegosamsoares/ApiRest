@@ -1,0 +1,21 @@
+
+public class Fibonnaci {
+
+	public static void main(String[] args) {
+
+		int[] ArrayFibo = new int[10];
+		int anterior = 0;
+		int prox = 1;
+		for (int i = 0; i < 10; i++) {
+			ArrayFibo[i] = prox;
+			anterior=prox;
+			prox = prox + anterior;
+			
+		}
+		for (int i : ArrayFibo) {
+			System.out.println(ArrayFibo[i]);
+		}
+
+	}
+
+}

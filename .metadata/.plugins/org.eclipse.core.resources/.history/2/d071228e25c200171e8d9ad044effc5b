@@ -1,0 +1,7 @@
+package apirest;
+
+import org.glassfish.jersey.servlet.ServletContainer;
+
+public class ApiController extends ServletContainer {
+
+}

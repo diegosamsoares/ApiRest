@@ -1,0 +1,11 @@
+import javax.ws.rs.ApplicationPath;
+
+@ApplicationPath("rest")
+public class MyApp {
+
+	
+	
+	public MyApp() {
+
+	}
+}

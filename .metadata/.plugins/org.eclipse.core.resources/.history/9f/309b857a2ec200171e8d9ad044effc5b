@@ -1,0 +1,39 @@
+package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+import model.Chamado;
+
+@Path("chamados")
+public class ChamadoController {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("lista")
+	private List<Chamado> lista(){
+		List<Chamado>lista = new ArrayList<Chamado>();
+		Chamado ch1 = new Chamado(new Long(1) , "teste1");
+		Chamado ch2 = new Chamado(new Long(2) , "teste2");
+		Chamado ch3 = new Chamado(new Long(3) , "teste3");
+		lista.add(ch1);
+		lista.add(ch2);
+		lista.add(ch3);
+		return lista;
+		
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getMensagem(@QueryParam("usuario") String usuario) {
+		return "bemvindo:" + usuario;
+		// http://localhost:8080/apirest/rest/lista/?usuario=chico
+	}
+	
+
+}

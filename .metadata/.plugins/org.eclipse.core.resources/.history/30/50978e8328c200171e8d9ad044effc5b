@@ -1,0 +1,16 @@
+package apirest;
+
+import javax.ws.rs.Path;
+
+import org.glassfish.jersey.servlet.ServletContainer;
+
+
+@Path("lista")
+public class ApiController extends ServletContainer {
+	private static final long serialVersionUID = 3870076158297194160L;
+
+	
+	public String lista() {
+		
+	}
+}

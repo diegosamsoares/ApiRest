@@ -1,0 +1,29 @@
+package apirest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+import org.glassfish.jersey.servlet.ServletContainer;
+
+
+@Path("lista")
+public class ApiController extends ServletContainer {
+	private static final long serialVersionUID = 3870076158297194160L;
+
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getMensagem(@QueryParam("usuario") String usuario) {
+		return "bemvindo"+ usuario;
+	}
+	
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getUsuario(@PathParam("id") long id) {
+		return "Recuperando usuario com ID:"+ id;
+	}
+}
